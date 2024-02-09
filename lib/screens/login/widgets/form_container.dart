@@ -8,7 +8,7 @@ class FormContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
-      child: Form(
+      child: const Form(
         child: Column(
           children: [
             InputField(
