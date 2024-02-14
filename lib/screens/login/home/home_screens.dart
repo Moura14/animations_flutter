@@ -1,4 +1,4 @@
-import 'package:animations_flutter/screens/login/widgets/stagger_animation.dart';
+import 'package:animations_flutter/screens/login/home/widgets/stagger_animation.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreens extends StatefulWidget {
@@ -17,6 +17,8 @@ class _HomeScreensState extends State<HomeScreens>
     super.initState();
     _controller = AnimationController(
         vsync: this, duration: const Duration(microseconds: 2400));
+
+    _controller.forward();
   }
 
   @override
@@ -27,8 +29,9 @@ class _HomeScreensState extends State<HomeScreens>
 
   @override
   Widget build(BuildContext context) {
-    return StaggerAnimation(
-      controller: _controller.view,
-    );
+    return Container(
+        child: StaggerAnimation(
+      controller: _controller,
+    ));
   }
 }
