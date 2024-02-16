@@ -1,3 +1,4 @@
+import 'package:animations_flutter/screens/login/home/widgets/category_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeTop extends StatelessWidget {
@@ -16,7 +17,6 @@ class HomeTop extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -54,11 +54,11 @@ class HomeTop extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
+            const CategoryView()
           ],
         ),
       ),
-      // Example of using the containerRow animation
     );
   }
 }

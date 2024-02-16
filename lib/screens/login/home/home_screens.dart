@@ -10,20 +10,20 @@ class HomeScreens extends StatefulWidget {
 
 class _HomeScreensState extends State<HomeScreens>
     with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
+  AnimationController? _controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-        vsync: this, duration: const Duration(microseconds: 2400));
+    _controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 2));
 
-    _controller.forward();
+    _controller!.forward();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller!.dispose();
     super.dispose();
   }
 
@@ -31,7 +31,7 @@ class _HomeScreensState extends State<HomeScreens>
   Widget build(BuildContext context) {
     return Container(
         child: StaggerAnimation(
-      controller: _controller,
+      controller: _controller!,
     ));
   }
 }
